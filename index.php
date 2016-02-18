@@ -6,29 +6,44 @@
 	<link rel="stylesheet" type="text/css" href="style.css"></link>
 </head>
 <body>
+	<?php
+		session_start();
+	?>
 	<p>
-		Pin State: <span id="lightState"></span>
+		Circuit ONE State: <span id="circuitOneState"></span>
+		<br>
+		Circuit TWO State: <span id="circuitTwoState"></span>
+		<br>
+		Message: <span id="message"></span>
 	</p>
-	<!-- <br><br>
-	<button onclick='lightOn()'>LIGHT ON</button>
-	<br>
-	<br>
-	<button onclick='lightOff()'>LIGHT OFF</button>
-	<br>
-	<br>
-	<div class="onoffswitch">
-	    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-	    <label class="onoffswitch-label" for="myonoffswitch">
-	        <span class="onoffswitch-inner"></span>
-	        <span class="onoffswitch-switch"></span>
-	    </label>
-	</div>
- -->
-	<br><br>
+	<!--<br><br>
 	<div class="Switch Off">
 		<div class="Toggle"></div>
 		<span class="On">ON</span>
 		<span class="Off">OFF</span>
 	</div>
+	-->
+	<table class="table table-striped">
+		<tr>
+			<td>Circuit ONE</td>
+			<td>
+				<div class="Switch Off one">
+					<div class="Toggle"></div>
+					<span class="On">ON</span>
+					<span class="Off">OFF</span>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>Circuit TWO</td>
+			<td>
+				<div class="Switch Off two">
+					<div class="Toggle"></div>
+					<span class="On">ON</span>
+					<span class="Off">OFF</span>
+				</div>
+			</td>				
+		</tr>
+	</table>
 </body>
 </html>

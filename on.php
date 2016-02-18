@@ -1,3 +1,9 @@
 <?php
-	$result =  exec("gpio write 10 0");
+	session_start();
+	$pin = $_GET['pin'];
+	if ($pin === NULL){
+		echo "'pin' variable not specified.";
+	} else {
+		echo exec("gpio write ".$pin." 0");
+	}
 ?>
